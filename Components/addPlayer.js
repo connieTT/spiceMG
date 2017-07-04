@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Header, Left, Title, Right, Content, Button, Icon, Text, Form, Item, Input} from 'native-base';
-//import Realm from 'realm';
+import {Container, Header, Left, Title, Right, Content, Button, Icon, Text, Form, Item, Input, Label} from 'native-base';
 
 class addPlayer extends Component {
   constructor(props) {
@@ -13,10 +12,6 @@ class addPlayer extends Component {
     }
   }
 
-  sendToRealm() {
-    //Todo
-  }
-
   render() {
     return (
       <Container>
@@ -24,17 +19,21 @@ class addPlayer extends Component {
         </Header>
         <Content>
           <Form>
-            <Item>
-              <Input placeholder="Name" onChangeText={(text) => this.setState({name: text})}/>
+            <Item floatingLabel>
+              <Label>Name</Label>
+              <Input onChangeText={(text) => this.setState({name: text})}/>
             </Item>
-            <Item>
-              <Input placeholder="Number" onChangeText={(text) => this.setState({number: text})}/>
+            <Item floatingLabel>
+              <Label>Number</Label>
+              <Input onChangeText={(text) => this.setState({number: text})}/>
             </Item>
-            <Item>
-              <Input placeholder="Position" onChangeText={(text) => this.setState({position: text})}/>
+            <Item floatingLabel>
+              <Label>Position</Label>
+              <Input onChangeText={(text) => this.setState({position: text})}/>
             </Item>
-            <Item>
-              <Input placeholder="Phone Number" onChangeText={(text) => this.setState({phoneNumber: text})}/>
+            <Item floatingLabel last>
+              <Label>Phone Number</Label>
+              <Input onChangeText={(text) => this.setState({phoneNumber: text})}/>
             </Item>
           </Form>
           <Button danger onPress={() => this.sendToRealm()} style={{alignSelf: 'center', marginTop:100}}>

@@ -1,5 +1,5 @@
 import {Actions, Router, Scene} from 'react-native-router-flux';
-import React, {Component} from 'react'
+import React from 'react';
 import ScheduleList from './Components/ScheduleList';
 import PlayerList from './Components/PlayerList';
 import addSchedule from './Components/addSchedule';
